@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anagh Gupta — Software Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Anagh Gupta — B.Tech student, aspiring software developer skilled in Python, Flask, AI/LLMs, and full-stack web development. Seeking internship opportunities." />
+  <meta name="keywords" content="Anagh Gupta, Portfolio, Software Developer, Python, Flask, AI, LLM, Full Stack, Internship" />
+  <meta name="author" content="Anagh Gupta" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Anagh Gupta — Software Developer Portfolio" />
+  <meta property="og:description" content="B.Tech student & aspiring software developer building with AI, Flask, and modern web technologies." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+</head>
+<body>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#hero" class="nav-logo">&lt;<span>AG</span>/&gt;</a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+        <a href="https://drive.google.com/uc?export=download&id=1XVczVWALQm1RhyfhxZ-leYK8czRCbS1O" class="nav-cta" target="_blank" rel="noopener">Resume ↓</a>
+      </div>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <canvas id="particles-canvas"></canvas>
+    <div class="container hero-content">
+
+      <!-- Left: Text -->
+      <div class="hero-text">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">
+          <span class="gradient-text">Anagh Gupta</span>
+        </h1>
+        <p class="hero-tagline">
+          <span id="typewriter-text"></span><span class="cursor"></span>
+        </p>
+        <p class="hero-description">
+          B.Tech student at KIIT, Bhubaneswar — passionate about Data Science, AI, and building intelligent web applications. Aspiring Data Analyst with a love for turning data into actionable insights through clean code and smart solutions.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+            View Projects
+          </a>
+          <a href="https://drive.google.com/uc?export=download&id=1XVczVWALQm1RhyfhxZ-leYK8czRCbS1O" class="btn btn-outline" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+        </div>
+        <div class="hero-socials">
+          <!-- GitHub -->
+          <a href="https://github.com/anagh-guptaa" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/anagh-gupta-00x/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:anagh.guptaaa@gmail.com" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+          <!-- Phone -->
+          <a href="tel:+918388010528" class="social-link" aria-label="Phone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Terminal Code Card -->
+      <div class="hero-visual">
+        <div class="terminal-card">
+          <div class="terminal-header">
+            <span class="terminal-dot red"></span>
+            <span class="terminal-dot yellow"></span>
+            <span class="terminal-dot green"></span>
+            <span class="terminal-title">anagh_gupta.py</span>
+          </div>
+          <div class="terminal-body">
+            <div><span class="keyword">class</span> <span class="function">Developer</span><span class="bracket">:</span></div>
+            <div>&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">__init__</span><span class="bracket">(</span><span class="variable">self</span><span class="bracket">)</span><span class="bracket">:</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">self</span>.<span class="variable">name</span> <span class="operator">=</span> <span class="string">"Anagh Gupta"</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">self</span>.<span class="variable">role</span> <span class="operator">=</span> <span class="string">"Aspiring Data Analyst"</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="variable">self</span>.<span class="variable">skills</span> <span class="operator">=</span> <span class="bracket">[</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"Python"</span>, <span class="string">"Flask"</span>,</div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"AI/LLMs"</span>, <span class="string">"React.js"</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="bracket">]</span></div>
+            <div></div>
+            <div>&nbsp;&nbsp;<span class="keyword">def</span> <span class="function">aspiration</span><span class="bracket">(</span><span class="variable">self</span><span class="bracket">)</span><span class="bracket">:</span></div>
+            <div>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">"Turn data into insights"</span></div>
+            <div></div>
+            <div><span class="comment"># Let's build something amazing! 🚀</span></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// About Me</span>
+        <h2 class="section-title">Get To Know Me</h2>
+        <p class="section-subtitle">A driven developer who loves turning ideas into reality through code.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left: Bio -->
+        <div class="about-text reveal">
+          <p>
+            I'm <strong>Anagh Gupta</strong>, a B.Tech student in <strong>Electronics & Computer Science Engineering</strong> at Kalinga Institute of Industrial Technology (KIIT), Bhubaneswar. Currently maintaining a <strong>CGPA of 8.18</strong>, I'm passionate about software development and building solutions that matter.
+          </p>
+          <p>
+            My journey spans from building <strong>AI-powered database query systems</strong> using LLMs to crafting <strong>full-stack web platforms</strong> with Flask and RESTful APIs. I'm passionate about <strong>Data Science</strong> and aspire to become a <strong>Data Analyst</strong> — turning raw data into meaningful insights. I love exploring the intersection of <strong>AI, data analytics, and web development</strong>, always pushing myself to learn new technologies.
+          </p>
+          <p>
+            Beyond the code, I'm a <strong>Finance Team Member</strong> at Kraya and Kuber Society, and a former <strong>school football player</strong> — I believe teamwork on and off the field shapes how I approach collaborative development.
+          </p>
+
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">8.18</div>
+              <div class="stat-label">Current CGPA</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">5+</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Education Timeline -->
+        <div class="reveal">
+          <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 28px; color: var(--text-primary);">
+            <span style="color: var(--accent-cyan);">📚</span> Education
+          </h3>
+          <div class="education-timeline">
+            <div class="edu-item">
+              <div class="edu-year">2023 — Present</div>
+              <div class="edu-degree">B.Tech — ECE</div>
+              <div class="edu-school">Kalinga Institute of Industrial Technology, Bhubaneswar</div>
+              <div class="edu-score">CGPA: 8.18 (Current)</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-year">2022</div>
+              <div class="edu-degree">Senior Secondary (XII)</div>
+              <div class="edu-school">CBSE Board</div>
+              <div class="edu-score">Percentage: 73.2%</div>
+            </div>
+            <div class="edu-item">
+              <div class="edu-year">2020</div>
+              <div class="edu-degree">Secondary (X)</div>
+              <div class="edu-school">CBSE Board</div>
+              <div class="edu-score">Percentage: 72%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// My Toolkit</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-subtitle">The tools and technologies I use to bring ideas to life.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category reveal reveal-delay-1">
+          <div class="skill-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="skill-category-title">Programming Languages</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="skill-category reveal reveal-delay-2">
+          <div class="skill-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-violet);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 class="skill-category-title">Web Development</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">Jinja</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category reveal reveal-delay-3">
+          <div class="skill-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3 class="skill-category-title">Databases</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">SQLite</span>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="skill-category reveal reveal-delay-4">
+          <div class="skill-icon" style="background: rgba(236, 72, 153, 0.1); color: var(--accent-pink);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4c0 1.95-1.4 3.58-3.25 3.93"/><path d="M8.24 4.23A4 4 0 0 1 12 2"/><path d="M17 10c2.21 0 4 1.79 4 4s-1.79 4-4 4"/><path d="M7 10c-2.21 0-4 1.79-4 4s1.79 4 4 4"/><path d="M12 22v-4"/><path d="M12 18a4 4 0 0 1-4-4"/><path d="M12 18a4 4 0 0 0 4-4"/></svg>
+          </div>
+          <h3 class="skill-category-title">AI & ML Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Ollama</span>
+            <span class="skill-tag">OpenClaw</span>
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">BeautifulSoup</span>
+          </div>
+        </div>
+
+        <!-- Tools & DevOps -->
+        <div class="skill-category reveal reveal-delay-5">
+          <div class="skill-icon" style="background: rgba(245, 158, 11, 0.1); color: #f59e0b;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          </div>
+          <h3 class="skill-category-title">Tools & Platforms</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">VS Code</span>
+          </div>
+        </div>
+
+        <!-- Coursework / Concepts -->
+        <div class="skill-category reveal reveal-delay-6">
+          <div class="skill-icon" style="background: rgba(99, 102, 241, 0.1); color: #6366f1;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3 class="skill-category-title">Core Concepts</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">DSA</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">Operating Systems</span>
+            <span class="skill-tag">Computer Networks</span>
+            <span class="skill-tag">Data Analytics</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Featured Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Real-world projects where I applied my skills to solve interesting problems.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: NL DB Query System -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <div class="project-status completed">
+              <span class="status-dot"></span>
+              Completed
+            </div>
+            <h3 class="project-title">Natural Language Database Query System</h3>
+            <p class="project-description">
+              An AI-powered system that lets users interact with relational databases using natural language, translating queries into SQL via LLMs.
+            </p>
+            <ul class="project-highlights">
+              <li>LLM-driven conversion of natural language to executable SQL using Ollama</li>
+              <li>Flask backend for query processing and database communication</li>
+              <li>MySQL integration for dynamic data retrieval and structured display</li>
+              <li>REST API architecture for clean frontend-backend separation</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">REST APIs</span>
+              <span class="tech-tag">HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/anagh-guptaa/nl-db-query-llm" class="project-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-icon-large" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">
+              🧠
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Blog Platform -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <div class="project-status in-progress">
+              <span class="status-dot"></span>
+              In Progress
+            </div>
+            <h3 class="project-title">Blog Platform with Authentication</h3>
+            <p class="project-description">
+              A full-stack blog platform with dynamic content management, user authentication, and modern server-side rendering.
+            </p>
+            <ul class="project-highlights">
+              <li>RESTful APIs enabling full CRUD operations for blog posts</li>
+              <li>Relational database integration for user and content management</li>
+              <li>Dynamic server-side UI with Jinja templates</li>
+              <li>User authentication system and cloud deployment in progress</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">Jinja</span>
+              <span class="tech-tag">HTML/CSS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/anagh-guptaa/blog-platform" class="project-link" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-icon-large" style="background: linear-gradient(135deg, #8b5cf6, #ec4899);">
+              ✍️
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: AI Voice Assistant -->
+        <div class="project-card reveal">
+          <div class="project-info">
+            <div class="project-status in-development">
+              <span class="status-dot"></span>
+              In Development
+            </div>
+            <h3 class="project-title">AI Voice Assistant (IoT + LLM)</h3>
+            <p class="project-description">
+              A smart voice assistant combining ESP32-S3 hardware with a FastAPI backend — detects voice commands, processes them through an LLM, and delivers intelligent responses including email summaries and live web search results.
+            </p>
+            <ul class="project-highlights">
+              <li>ESP32-S3 with voice activity detection via MAX4466 microphone</li>
+              <li>FastAPI backend integrated with Ollama LLM for natural language understanding</li>
+              <li>Gmail API integration for reading, summarizing, and managing emails</li>
+              <li>Live web search with intelligent response formatting on LCD display</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">ESP32-S3</span>
+              <span class="tech-tag">MicroPython</span>
+              <span class="tech-tag">Gmail API</span>
+            </div>
+            <div class="project-links">
+              <span class="project-link coming-soon">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                Coming Soon on GitHub
+              </span>
+            </div>
+          </div>
+          <div class="project-visual">
+            <div class="project-icon-large" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+              🎙️
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATIONS ==================== -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Continuous Learning</span>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">5+ courses and certifications that continue to shape my development journey.</p>
+      </div>
+
+      <div class="certs-grid">
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-info">
+            <div class="cert-name">Flask with Python</div>
+            <div class="cert-provider">by Corey Schafer</div>
+            <a href="https://drive.google.com/file/d/1XeIporYUPx4voFbEtiKSMcUHbrB4XDNJ/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener">View Certificate →</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-info">
+            <div class="cert-name">Python Fast API</div>
+            <div class="cert-provider">by Turtle Code</div>
+            <a href="https://drive.google.com/file/d/1u1rsYLPosP78NqEcLBrLgbXz3Lz4Pm9c/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener">View Certificate →</a>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-3">
+          <div class="cert-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-info">
+            <div class="cert-name">Postman Tutorial</div>
+            <div class="cert-provider">by Software Testing Mentor</div>
+            <a href="https://drive.google.com/file/d/1IZjPY9sF7Q22MCnM7AooBRlZg8AUxwdn/view?usp=drive_link" class="cert-link" target="_blank" rel="noopener">View Certificate →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="certs-footer reveal">
+        <a href="https://drive.google.com/drive/folders/1HZaNBMQCK75ByLAMzgSsSSqlO3iNRSpg?usp=drive_link" class="btn btn-outline" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          View All My Certificates →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EXTRACURRICULARS ==================== -->
+  <section class="section" id="extras">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Beyond Code</span>
+        <h2 class="section-title">Extracurriculars</h2>
+        <p class="section-subtitle">Activities that shape my teamwork, leadership, and problem-solving skills.</p>
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-card reveal reveal-delay-1">
+          <div class="extra-icon">💼</div>
+          <div>
+            <div class="extra-title">Finance Team Member</div>
+            <div class="extra-desc">Kraya and Kuber Society — Contributing to event finance management and team coordination at KIIT.</div>
+          </div>
+        </div>
+
+        <div class="extra-card reveal reveal-delay-2">
+          <div class="extra-icon">⚽</div>
+          <div>
+            <div class="extra-title">Football Player — School Team</div>
+            <div class="extra-desc">Represented the school football team in inter-school competitions, building discipline and teamwork.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Let's Connect</span>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">I'm currently looking for Data Science & Data Analyst internship opportunities. Let's chat!</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Let's work together</h3>
+          <p>
+            I'm actively seeking internship opportunities where I can contribute, learn, and grow as a developer. Whether you have a question, a project idea, or just want to say hi — my inbox is always open!
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:anagh.guptaaa@gmail.com" class="contact-method">
+              <div class="contact-method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Email</div>
+                <div class="contact-method-value">anagh.guptaaa@gmail.com</div>
+              </div>
+            </a>
+
+            <a href="tel:+918388010528" class="contact-method">
+              <div class="contact-method-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">Phone</div>
+                <div class="contact-method-value">+91 8388010528</div>
+              </div>
+            </a>
+
+            <a href="https://www.linkedin.com/in/anagh-gupta-00x/" class="contact-method" target="_blank" rel="noopener">
+              <div class="contact-method-icon" style="background: rgba(139, 92, 246, 0.1); color: var(--accent-violet);">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">LinkedIn</div>
+                <div class="contact-method-value">anagh-gupta-00x</div>
+              </div>
+            </a>
+
+            <a href="https://github.com/anagh-guptaa" class="contact-method" target="_blank" rel="noopener">
+              <div class="contact-method-icon" style="background: rgba(16, 185, 129, 0.1); color: var(--accent-emerald);">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div>
+                <div class="contact-method-label">GitHub</div>
+                <div class="contact-method-value">anagh-guptaa</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form reveal" id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="John Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="john@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="Hi Anagh, I'd love to discuss..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            Send Message →
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-socials">
+        <a href="https://github.com/anagh-guptaa" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/anagh-gupta-00x/" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="mailto:anagh.guptaaa@gmail.com" class="social-link" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+      <p class="footer-text">
+        Designed & Built by Anagh Gupta with <span>❤️</span>
+      </p>
+      <p class="footer-text" style="font-size: 0.78rem; margin-top: -8px;">
+        © 2026 — All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/typewriter.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

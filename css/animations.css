@@ -1,0 +1,179 @@
+/* ============================================
+   ANIMATIONS — Keyframes & Animated Classes
+   ============================================ */
+
+/* ---------- Fade & Slide Entrances ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ---------- Scale ---------- */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ---------- Floating / Levitation ---------- */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-8px) rotate(1deg); }
+  66% { transform: translateY(-4px) rotate(-1deg); }
+}
+
+/* ---------- Pulse / Glow ---------- */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 12px rgba(6, 182, 212, 0);
+  }
+}
+
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(6, 182, 212, 0.5));
+  }
+}
+
+/* ---------- Gradient shift ---------- */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ---------- Spin ---------- */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- Typing cursor blink ---------- */
+@keyframes cursorBlink {
+  0%, 100% { border-right-color: var(--accent-cyan); }
+  50% { border-right-color: transparent; }
+}
+
+/* ---------- Line draw ---------- */
+@keyframes drawLine {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* ---------- Status dot pulse ---------- */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.project-status.in-progress .status-dot {
+  animation: statusPulse 1.5s ease-in-out infinite;
+}
+.project-status.in-development .status-dot {
+  animation: statusPulse 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   ANIMATION UTILITY CLASSES
+   ============================================ */
+
+/* Apply to hero elements for staggered entrance */
+.hero-text .hero-greeting {
+  animation: fadeInUp 0.6s var(--ease-out) 0.2s both;
+}
+.hero-text .hero-name {
+  animation: fadeInUp 0.6s var(--ease-out) 0.35s both;
+}
+.hero-text .hero-tagline {
+  animation: fadeInUp 0.6s var(--ease-out) 0.5s both;
+}
+.hero-text .hero-description {
+  animation: fadeInUp 0.6s var(--ease-out) 0.65s both;
+}
+.hero-text .hero-buttons {
+  animation: fadeInUp 0.6s var(--ease-out) 0.8s both;
+}
+.hero-text .hero-socials {
+  animation: fadeInUp 0.6s var(--ease-out) 0.95s both;
+}
+.hero-visual {
+  animation: fadeInRight 0.8s var(--ease-out) 0.6s both;
+}
+
+/* Terminal card float */
+.terminal-card {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Navbar entrance */
+.navbar {
+  animation: fadeInDown 0.5s var(--ease-out) 0.1s both;
+}
+
+/* Reveal stagger delays (applied via JS) */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
