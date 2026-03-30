@@ -1,13 +1,7 @@
-/* ============================================
-   ANAGH GUPTA — PORTFOLIO DESIGN SYSTEM
-   ============================================ */
 
-/* ---------- Google Fonts ---------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 
-/* ---------- CSS Custom Properties ---------- */
 :root {
-  /* Colors */
   --bg-primary:    #0a0f1c;
   --bg-secondary:  #111827;
   --bg-tertiary:   #1a2236;
@@ -17,7 +11,6 @@
   --glass-border:  rgba(255, 255, 255, 0.08);
   --glass-shadow:  0 8px 32px rgba(0, 0, 0, 0.3);
 
-  /* Accent Colors */
   --accent-cyan:    #06b6d4;
   --accent-violet:  #8b5cf6;
   --accent-pink:    #ec4899;
@@ -26,28 +19,23 @@
   --gradient-warm:    linear-gradient(135deg, #8b5cf6, #ec4899);
   --gradient-hero:    linear-gradient(135deg, #06b6d4 0%, #8b5cf6 50%, #ec4899 100%);
 
-  /* Text */
   --text-primary:   #f1f5f9;
   --text-secondary: #94a3b8;
   --text-muted:     #64748b;
 
-  /* Typography */
   --font-body:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
 
-  /* Spacing */
   --section-padding: 100px 0;
   --container-max:   1200px;
   --container-pad:   24px;
 
-  /* Borders & Radius */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
   --radius-xl: 24px;
 
-  /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: 0.2s var(--ease-out);
   --transition-normal: 0.4s var(--ease-out);
@@ -106,7 +94,6 @@ ul { list-style: none; }
 img { max-width: 100%; display: block; }
 button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 
-/* ---------- Utility ---------- */
 .container {
   max-width: var(--container-max);
   margin: 0 auto;
@@ -152,7 +139,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   margin: 0 auto;
 }
 
-/* Reveal animation class */
 .reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -163,7 +149,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   transform: translateY(0);
 }
 
-/* ---------- NAVIGATION ---------- */
 .navbar {
   position: fixed;
   top: 0;
@@ -254,7 +239,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3) !important;
 }
 
-/* Mobile hamburger */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -274,7 +258,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 .nav-toggle.open span:nth-child(2) { opacity: 0; }
 .nav-toggle.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
-/* ---------- HERO SECTION ---------- */
 .hero {
   min-height: 100vh;
   display: flex;
@@ -434,7 +417,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   height: 20px;
 }
 
-/* Hero right — terminal card */
 .hero-visual {
   position: relative;
 }
@@ -489,7 +471,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 .terminal-body .bracket { color: var(--text-secondary); }
 .terminal-body .operator { color: var(--accent-pink); }
 
-/* Floating glow behind terminal */
 .hero-visual::before {
   content: '';
   position: absolute;
@@ -503,7 +484,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   z-index: -1;
 }
 
-/* ---------- ABOUT SECTION ---------- */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -560,7 +540,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   margin-top: 4px;
 }
 
-/* Education timeline */
 .education-timeline {
   position: relative;
   padding-left: 32px;
@@ -632,7 +611,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   margin-top: 6px;
 }
 
-/* ---------- SKILLS SECTION ---------- */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -719,7 +697,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   transform: translateY(-2px);
 }
 
-/* ---------- PROJECTS SECTION ---------- */
 .projects-grid {
   display: grid;
   gap: 32px;
@@ -744,7 +721,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
-/* Animated gradient border on hover */
 .project-card::before {
   content: '';
   position: absolute;
@@ -761,7 +737,7 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
 .project-card:hover::before {
   opacity: 1;
 }
-/* Inner mask */
+
 .project-card::after {
   content: '';
   position: absolute;
@@ -940,7 +916,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   transform: scale(1.05) rotate(3deg);
 }
 
-/* ---------- CERTIFICATIONS SECTION ---------- */
 .certs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1016,7 +991,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   margin-top: 40px;
 }
 
-/* ---------- EXTRACURRICULARS ---------- */
 .extras-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1062,7 +1036,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   font-size: 0.88rem;
 }
 
-/* ---------- CONTACT SECTION ---------- */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1132,7 +1105,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   font-size: 0.95rem;
 }
 
-/* Contact form */
 .contact-form {
   background: var(--surface);
   border: 1px solid var(--glass-border);
@@ -1199,7 +1171,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   box-shadow: 0 8px 30px rgba(6, 182, 212, 0.3);
 }
 
-/* ---------- FOOTER ---------- */
 .footer {
   padding: 40px 0;
   border-top: 1px solid var(--glass-border);
@@ -1227,7 +1198,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   color: var(--accent-pink);
 }
 
-/* Back to top */
 .back-to-top {
   position: fixed;
   bottom: 32px;
@@ -1259,7 +1229,6 @@ button { cursor: pointer; border: none; outline: none; font-family: inherit; }
   box-shadow: 0 8px 25px rgba(6, 182, 212, 0.4);
 }
 
-/* ---------- RESPONSIVE ---------- */
 @media (max-width: 1024px) {
   .hero-content { grid-template-columns: 1fr; gap: 40px; }
   .hero-text { max-width: 100%; text-align: center; }

@@ -1,15 +1,11 @@
-/**
- * Main JS — Navigation, Scroll Reveals, Active Section, Form
- */
+
 (function () {
-  // ========== NAVBAR ==========
   const navbar = document.querySelector('.navbar');
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   const navItems = document.querySelectorAll('.nav-links a:not(.nav-cta)');
   const backToTop = document.querySelector('.back-to-top');
 
-  // Scroll — add .scrolled class to navbar
   function handleScroll() {
     if (window.scrollY > 50) {
       navbar.classList.add('scrolled');
@@ -17,7 +13,6 @@
       navbar.classList.remove('scrolled');
     }
 
-    // Back to top button
     if (backToTop) {
       if (window.scrollY > 600) {
         backToTop.classList.add('visible');
@@ -29,7 +24,6 @@
 
   window.addEventListener('scroll', handleScroll, { passive: true });
 
-  // Mobile menu toggle
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       navToggle.classList.toggle('open');
@@ -37,7 +31,6 @@
     });
   }
 
-  // Close mobile menu on link click
   navItems.forEach((item) => {
     item.addEventListener('click', () => {
       navToggle.classList.remove('open');
@@ -45,7 +38,6 @@
     });
   });
 
-  // ========== ACTIVE NAV ON SCROLL ==========
   const sections = document.querySelectorAll('section[id]');
 
   function setActiveNav() {
@@ -67,7 +59,6 @@
 
   window.addEventListener('scroll', setActiveNav, { passive: true });
 
-  // ========== SCROLL REVEAL ==========
   const revealElements = document.querySelectorAll('.reveal');
 
   const revealObserver = new IntersectionObserver(
@@ -87,14 +78,12 @@
 
   revealElements.forEach((el) => revealObserver.observe(el));
 
-  // ========== BACK TO TOP ==========
   if (backToTop) {
     backToTop.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
 
-  // ========== CONTACT FORM ==========
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
@@ -103,12 +92,10 @@
       const email = contactForm.querySelector('#contact-email').value;
       const message = contactForm.querySelector('#contact-message').value;
 
-      // Open mailto
       const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
       const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
       window.open(`mailto:anagh.guptaaa@gmail.com?subject=${subject}&body=${body}`);
 
-      // Show success feedback
       const btn = contactForm.querySelector('.btn-submit');
       const originalText = btn.textContent;
       btn.textContent = '✓ Opening email client...';
@@ -121,7 +108,6 @@
     });
   }
 
-  // ========== SMOOTH ANCHOR SCROLL ==========
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
       const target = document.querySelector(this.getAttribute('href'));
@@ -132,7 +118,6 @@
     });
   });
 
-  // Init
   handleScroll();
   setActiveNav();
 })();

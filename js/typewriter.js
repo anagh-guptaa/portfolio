@@ -1,7 +1,4 @@
-/**
- * Typewriter Effect
- * Types out different roles/subtitles in the hero section.
- */
+
 (function () {
   const element = document.getElementById('typewriter-text');
   if (!element) return;
@@ -52,6 +49,5 @@
     setTimeout(type, timeout);
   }
 
-  // Start after a brief delay
   setTimeout(type, 1000);
 })();

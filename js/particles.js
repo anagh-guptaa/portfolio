@@ -1,7 +1,4 @@
-/**
- * Particle / Constellation Canvas Background
- * Creates a subtle, animated network of dots connected by lines.
- */
+
 (function () {
   const canvas = document.getElementById('particles-canvas');
   if (!canvas) return;
@@ -17,7 +14,7 @@
     particleRadius: 1.5,
     connectionDistance: 150,
     particleColor: 'rgba(6, 182, 212, 0.5)',
-    lineColor: 'rgba(6, 182, 212, ',  // alpha appended dynamically
+    lineColor: 'rgba(6, 182, 212, ',
     mouseRadius: 200,
   };
 
@@ -63,11 +60,9 @@
       p.x += p.vx;
       p.y += p.vy;
 
-      // Bounce off edges
       if (p.x < 0 || p.x > width) p.vx *= -1;
       if (p.y < 0 || p.y > height) p.vy *= -1;
 
-      // Clamp to canvas
       p.x = Math.max(0, Math.min(width, p.x));
       p.y = Math.max(0, Math.min(height, p.y));
     }
@@ -76,7 +71,6 @@
   function draw() {
     ctx.clearRect(0, 0, width, height);
 
-    // Draw connections
     for (let i = 0; i < particles.length; i++) {
       for (let j = i + 1; j < particles.length; j++) {
         const dx = particles[i].x - particles[j].x;
@@ -89,7 +83,6 @@
       }
     }
 
-    // Draw connections to mouse
     if (mouse.x !== null) {
       for (const p of particles) {
         const dx = p.x - mouse.x;
@@ -102,7 +95,6 @@
       }
     }
 
-    // Draw particles
     for (const p of particles) {
       drawParticle(p);
     }
@@ -114,7 +106,6 @@
     animationId = requestAnimationFrame(animate);
   }
 
-  // Event listeners
   window.addEventListener('resize', () => {
     resize();
     createParticles();
@@ -131,7 +122,6 @@
     mouse.y = null;
   });
 
-  // Init
   resize();
   createParticles();
   animate();
